@@ -16,25 +16,24 @@
   <meta name="author" content="KesonStar">
   <meta name="keywords" content="">
   
-    <meta name="description" content="My First Blog– By KesonStar第一次发博客，不知道该写些什么，就想到哪里写到哪里，顺便测试一些功能吧 我为什么想到要搭建一个自己的博客？其实最主要的关键就是一个，够酷！ 一个以自己名字命名的域名，一个自己搭建的博客，一个自己写的博客，这真的是泰裤辣！ 一切要从看到这个视频开始说起（偷偷测试一下图片和链接的功能xx）其实我在三月份就已经刷到过了，但是那个时候我甚至连markd">
+    <meta name="description" content="CS100期末Revision写在前面：这个文档是我在复习CS100期末考试的时候整理的，主要是对于自己一些不熟悉的知识点的整理，并非对于CS100知识点的全面复习。同时，本文可能会有一些错误，如果发现错误，欢迎指出。  1. 区分底层const和顶层const 顶层const：指针本身是个常量, 指针所指的对象不是常量（指针不可以指向别的对象，但是可以改变所指对象的值） 底层const：指针所指">
 <meta property="og:type" content="article">
-<meta property="og:title" content="第一篇博客">
-<meta property="og:url" content="http://example.com/2023/05/11/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:title" content="CS100期末Review">
+<meta property="og:url" content="http://example.com/2023/05/14/CS100%E6%9C%9F%E6%9C%ABReview/index.html">
 <meta property="og:site_name" content="KesonStar&#39;s Blog">
-<meta property="og:description" content="My First Blog– By KesonStar第一次发博客，不知道该写些什么，就想到哪里写到哪里，顺便测试一些功能吧 我为什么想到要搭建一个自己的博客？其实最主要的关键就是一个，够酷！ 一个以自己名字命名的域名，一个自己搭建的博客，一个自己写的博客，这真的是泰裤辣！ 一切要从看到这个视频开始说起（偷偷测试一下图片和链接的功能xx）其实我在三月份就已经刷到过了，但是那个时候我甚至连markd">
+<meta property="og:description" content="CS100期末Revision写在前面：这个文档是我在复习CS100期末考试的时候整理的，主要是对于自己一些不熟悉的知识点的整理，并非对于CS100知识点的全面复习。同时，本文可能会有一些错误，如果发现错误，欢迎指出。  1. 区分底层const和顶层const 顶层const：指针本身是个常量, 指针所指的对象不是常量（指针不可以指向别的对象，但是可以改变所指对象的值） 底层const：指针所指">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://imghubforks-1318113821.cos.ap-shanghai.myqcloud.com/202305112335352.png">
-<meta property="og:image" content="https://imghubforks-1318113821.cos.ap-shanghai.myqcloud.com/202305112349696.jpg">
-<meta property="article:published_time" content="2023-05-11T14:51:24.000Z">
-<meta property="article:modified_time" content="2023-05-11T16:00:10.991Z">
+<meta property="og:image" content="https://imghubforks-1318113821.cos.ap-shanghai.myqcloud.com/202305141612477.png">
+<meta property="article:published_time" content="2023-05-14T12:36:01.000Z">
+<meta property="article:modified_time" content="2023-05-14T12:40:30.566Z">
 <meta property="article:author" content="KesonStar">
-<meta property="article:tag" content="Intro">
+<meta property="article:tag" content="CS100">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://imghubforks-1318113821.cos.ap-shanghai.myqcloud.com/202305112335352.png">
+<meta name="twitter:image" content="https://imghubforks-1318113821.cos.ap-shanghai.myqcloud.com/202305141612477.png">
   
   
   
-  <title>第一篇博客 - KesonStar&#39;s Blog</title>
+  <title>CS100期末Review - KesonStar&#39;s Blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="第一篇博客"></span>
+            <span id="subtitle" data-typed-text="CS100期末Review"></span>
           
         </div>
 
@@ -211,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-05-11 22:51" pubdate>
-          2023年5月11日 晚上
+        <time datetime="2023-05-14 20:36" pubdate>
+          2023年5月14日 晚上
         </time>
       </span>
     
@@ -223,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          997 字
+          3.5k 字
         
       </span>
     
@@ -234,7 +233,7 @@
         
         
         
-          9 分钟
+          30 分钟
         
       </span>
     
@@ -272,27 +271,129 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">第一篇博客</h1>
+            <h1 style="display: none">CS100期末Review</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="My-First-Blog–-By-KesonStar"><a href="#My-First-Blog–-By-KesonStar" class="headerlink" title="My First Blog– By KesonStar"></a>My First Blog– By KesonStar</h1><p>第一次发博客，不知道该写些什么，就想到哪里写到哪里，顺便测试一些功能吧</p>
-<h2 id="我为什么想到要搭建一个自己的博客？"><a href="#我为什么想到要搭建一个自己的博客？" class="headerlink" title="我为什么想到要搭建一个自己的博客？"></a>我为什么想到要搭建一个自己的博客？</h2><p>其实最主要的关键就是一个，够<strong>酷</strong>！</p>
-<p>一个以自己名字命名的域名，一个自己搭建的博客，一个自己写的博客，这真的是<em>泰裤辣</em>！</p>
-<p>一切要从看到<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1ts4y1f7Gu/">这个视频</a>开始说起（偷偷测试一下图片和链接的功能xx）<br><img src="https://imghubforks-1318113821.cos.ap-shanghai.myqcloud.com/202305112335352.png" srcset="/img/loading.gif" lazyload><br>其实我在三月份就已经刷到过了，但是那个时候我甚至连markdown的基本语法都不会，(被劝退后直接收藏退出一气呵成~)但是随着一学期自己到处折腾vscode写md，折腾git和github，我发现我已经具备了去搭建一个自己博客的知识储备。<br>搭建一个自己域名的博客不是一件容易的事，从最开始有这个想法到hexo的配置，域名和图床的建立，从本地到最后部署，前后有将近<strong>一个多月</strong>的时间。以后有机会可能会发一篇博客来记录一下这整个搭建的过程。</p>
-<h2 id="这个博客以后会写些什么？"><a href="#这个博客以后会写些什么？" class="headerlink" title="这个博客以后会写些什么？"></a>这个博客以后会写些什么？</h2><p>就像title中写的那样——<em>For learning and life</em><br>上了大学，不再像高中一样有高考这一个唯一的目标，也就不再有以前那样督促自己去不断卷卷卷的内驱力了。大一的第一学期真的一晃而过，作为资深<strong>宿舍死宅</strong>，几乎每天都是宿舍、教中的两点一线，最多再加个图书馆。到底自己学到了什么，生活中发生了什么，感觉<em>眼中了了，心下匆匆</em>。<br>所以博客就是为了记录自己身边发生的事，记录自己的学习和生活，记录自己的成长。<br>我以后可能会随便发一些</p>
-<ul>
-<li>编程方面的学习笔记</li>
-<li>以后一些leetcode和洛谷的题解</li>
-<li>生活的随笔和感想（这个可能不会太多，好不容易和语文saygoodbye了）<br><img src="https://imghubforks-1318113821.cos.ap-shanghai.myqcloud.com/202305112349696.jpg" srcset="/img/loading.gif" lazyload>（ 这个表情包怎么这么大，以后得研究一下怎么把图片大小设置一下）</li>
-<li>看的番和小说的感想</li>
+                <h1 id="CS100期末Revision"><a href="#CS100期末Revision" class="headerlink" title="CS100期末Revision"></a>CS100期末Revision</h1><p>写在前面：这个文档是我在复习CS100期末考试的时候整理的，主要是对于自己一些不熟悉的知识点的整理，并非对于CS100知识点的全面复习。同时，本文可能会有一些错误，如果发现错误，欢迎指出。</p>
+<hr>
+<h2 id="1-区分底层const和顶层const"><a href="#1-区分底层const和顶层const" class="headerlink" title="1. 区分底层const和顶层const"></a>1. 区分底层<code>const</code>和顶层<code>const</code></h2><ul>
+<li>顶层<code>const</code>：指针本身是个常量, 指针所指的对象不是常量（指针不可以指向别的对象，但是可以改变所指对象的值）</li>
+<li>底层<code>const</code>：指针所指的对象是一个常量（指针可以指向别的对象，但是不可以改变所指对象的值）<br><em>e.g.</em><br>[1].<code>const int* const p</code>:第一个const是底层const，第二个是顶层const<br>[2].<code>const char&amp; operator[](int index) const</code>:第一个const是底层const，第二个const是加在<code>this</code>指针上的底层const,表示对象的所有成员都是常量，<strong>不可以被改变！！！</strong></li>
 </ul>
-<p>最后偷偷测试一点功能<br>代码块：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-meta">#<span class="hljs-keyword">include</span> <span class="hljs-string">&lt;iostream&gt;</span></span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span><br><span class="hljs-function"></span>&#123;<br>    std::cout &lt;&lt; <span class="hljs-string">&quot;Hello World!&quot;</span> &lt;&lt; std::endl;<br>    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+<p><strong>Remark:</strong> <em>为什么对一个类要定义<code>[]</code>运算符const和non-const两个版本的重载？</em><br>const对象只能调用const成员函数，而non-const对象可以调用const和non-const成员函数，所以为了让const对象也能调用<code>[]</code>运算符，就要定义const版本的<code>[]</code>运算符重载。如果a本身就带const，而fun不是const成员函数，那这个调用就是在试图去除底层const，这是不允许的。</p>
+<h2 id="2-C-amp-C-中的运算符"><a href="#2-C-amp-C-中的运算符" class="headerlink" title="2. C&amp;C++中的运算符"></a>2. C&amp;C++中的运算符</h2><ul>
+<li><code>/</code> int&#x2F;int <strong>为向零取整</strong></li>
+<li><code>%</code> 满足 <strong>(a &#x2F; b) * b + a % b &#x3D;&#x3D; a</strong></li>
+<li><code>||</code>和<code>&amp;&amp;</code>是<strong>短路求值</strong>：(short-circuited)：先求左边，如果左边的结果能确定表达式的结果，就不再对右边求值。</li>
+<li><code>,</code> 先对左边求值，再对右边求值，<strong>返回右边的值</strong></li>
+<li>运算符的<strong>优先级</strong>和<strong>结合性</strong>不会决定求值顺序<br><em>e.g</em>:<br><code>f() - g() + h()</code> 中的 <code>f()</code>，<code>g()</code> 和 <code>h()</code> 的调用顺序是 unspecified 的。<br><code>f() + g() * h()</code> 中的 <code>f()</code>，<code>g()</code> 和 <code>h()</code> 的调用顺序是 unspecified 的。<br><strong>Remark:</strong> 只有<code>&amp;&amp;</code>, <code>||</code>, <code>?:</code>,<code>,</code>的求值顺序是确定的，其他的都是unspecified的。</li>
+</ul>
+<h2 id="3-变量的声明和初始化"><a href="#3-变量的声明和初始化" class="headerlink" title="3. 变量的声明和初始化"></a>3. 变量的声明和初始化</h2><ul>
+<li>空初始化<blockquote>
+<p>对于全局 (global) 或者局部静态 (local static) 变量，不显式初始化的情况下执行<strong>空初始化</strong><br>对于局部非静态 (local non-static) 变量，不显式初始化的情况下将持有<strong>未定义的值</strong>：你不能对它的值作任何假定，<strong>使用未定义的值的行为是未定义的行为</strong><br>对于类内成员的默认初始化（调用默认构造函数）在未指定默认值时的值是<strong>未定义的值</strong></p>
+</blockquote>
+</li>
+</ul>
+<h2 id="4-指针"><a href="#4-指针" class="headerlink" title="4. 指针"></a>4. 指针</h2><ul>
+<li>指针的值是一个<strong>地址</strong>，这个地址指向某个对象</li>
+<li><code>p + i</code> 得到的地址是 <code>(void *)p + i * sizeof(Type)</code>，即和 <code>p</code> 相距 <code>i</code> 个 <code>Type</code>。</li>
+<li>如果指针 <code>p1</code> 和 <code>p2</code> 分别指向某一个数组的下标为 <code>i</code> 和 <code>j</code> 的位置，则 <code>p1 - p2</code><ul>
+<li>结果是 <code>i - j</code>，</li>
+<li>类型为 <code>ptrdiff_t</code>：一个定义在 <code>&lt;stddef.h&gt;</code> 里的类型，是一种带符号整数，其具体大小是 implementation-defined。</li>
+</ul>
+</li>
+</ul>
+<h3 id="二维数组"><a href="#二维数组" class="headerlink" title="二维数组"></a>二维数组</h3><ul>
+<li>数组指针：<code>int (*p)[10]</code> 指向一个含有10个整数的数组</li>
+<li>指针数组：<code>int *p[10]</code> 含有10个指向整数的指针的数组<br><strong>Remark:</strong> <em>如何理解 二维数组<code>int a[m][n]</code>？</em></li>
+</ul>
+<ol>
+<li>一个指向<code>int[n]</code>的指针，即 <code>int (*p)[n]</code>。</li>
+<li>存放了 <code>m</code> 个数组的地址，每个数组有 <code>n</code> 个 <code>int</code>，即 <code>int *p[m]</code>。（二维数组退化<em>degrade</em>为指向首元素<code>int [m]</code>的数组）</li>
+</ol>
+<h2 id="5-字符串"><a href="#5-字符串" class="headerlink" title="5. 字符串"></a>5. 字符串</h2><ul>
+<li>字符串字面值：类似这种 <code>&quot;abcde&quot;</code>（<strong>双引号！！！</strong>）<ul>
+<li>C：类型为 <code>char [N+1]</code>，其中 <code>N</code> 是它的长度，<code>+1</code> 是为了放空字符。</li>
+<li>C++：类型为 <code>const char [N+1]</code></li>
+</ul>
+</li>
+<li><code>&#39;a&#39;</code>的字符串字面值类型<ul>
+<li>C：<code>int</code></li>
+<li>C++：<code>char</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="lt-string-h-gt-的函数"><a href="#lt-string-h-gt-的函数" class="headerlink" title="&lt;string.h&gt;的函数"></a><code>&lt;string.h&gt;</code>的函数</h3><ul>
+<li><code>strcmp(s1, s2)</code> 按字典序 (lexicographical order) 比较两个字符串的大小。<ul>
+<li>如果 <code>s1</code>“小于”<code>s2</code>，返回<strong>一个负数</strong></li>
+<li>如果相等，返回 <code>0</code></li>
+<li>如果 <code>s1</code>“大于”<code>s2</code>，返回<strong>一个正数</strong></li>
+<li><strong>不可以认为它的返回值 $\in{-1,0,1}$！！！</strong></li>
+</ul>
+</li>
+<li><code>strcpy(to, from)</code> 将 <code>from</code> 的内容拷贝给 <code>to</code>。</li>
+</ul>
+<h3 id="lt-string-gt"><a href="#lt-string-gt" class="headerlink" title="&lt;string&gt;"></a><code>&lt;string&gt;</code></h3><ul>
+<li><strong>默认初始化一个 <code>std::string</code> 对象会得到空串，而非未定义的值！</strong></li>
+<li>字符串的IO：<ul>
+<li><code>std::cin</code>  会忽略开头的空白字符，直到遇到下一个空白字符为止。</li>
+<li><code>getline(std::cin, s)</code> 会读入一整行，包括开头的空白字符，直到遇到换行符为止。</li>
+</ul>
+</li>
+</ul>
+<h2 id="6-Class"><a href="#6-Class" class="headerlink" title="6. Class"></a>6. Class</h2><ul>
+<li><code>this</code> 指针：指向当前对象的指针，是一个隐式参数，<strong>只</strong>在<strong>成员函数内部</strong>使用。<ul>
+<li>特别的，static成员函数没有this指针，以<code>class::static_func()</code>调用。</li>
+</ul>
+</li>
+<li>构造函数通常是重载（<em>Overload</em>）的，构造函数不声明返回值类型，可以含有 <code>return;</code> 但不能返回一个值，<strong>但不能认为它的返回值类型是 <code>void</code>。</strong><ul>
+<li>重载匹配规则：<strong>最佳匹配</strong>（Best Match） <img src="https://imghubforks-1318113821.cos.ap-shanghai.myqcloud.com/202305141612477.png" srcset="/img/loading.gif" lazyload   width="50%"></li>
+</ul>
+</li>
+</ul>
+<h3 id="单例模式（Singleton）"><a href="#单例模式（Singleton）" class="headerlink" title="单例模式（Singleton）"></a>单例模式（<em>Singleton</em>）</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Widget</span> &#123;<br>  <span class="hljs-comment">// 构造函数是 private 的</span><br>  <span class="hljs-built_in">Widget</span>();<br> <span class="hljs-keyword">public</span>:<br>  <span class="hljs-built_in">Widget</span>(<span class="hljs-type">const</span> Widget &amp;) = <span class="hljs-keyword">delete</span>;<br>  Widget &amp;<span class="hljs-keyword">operator</span>=(<span class="hljs-type">const</span> Widget &amp;) = <span class="hljs-keyword">delete</span>;<br>  <span class="hljs-comment">// Magic happens here!!</span><br>  <span class="hljs-function"><span class="hljs-type">static</span> Widget &amp;<span class="hljs-title">get_instance</span><span class="hljs-params">()</span> </span>&#123;<br>    <span class="hljs-type">static</span> Widget w; <br>  &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
 
-<p>公式：<br>$\lim_{x \to \infty} x^2_{2} - \int_{1}^{5}x\mathrm{d}x + \sum_{n&#x3D;1}^{20} n^{2} &#x3D; \prod_{j&#x3D;1}^{3} y_{j}  + \lim_{x \to -2} \frac{x-2}{x}$</p>
-<p>最后还有一个评论的功能，不知道能不能用，先试试吧</p>
+<h3 id="继承和多态（Inheritance-and-Polymorphism）"><a href="#继承和多态（Inheritance-and-Polymorphism）" class="headerlink" title="继承和多态（Inheritance and Polymorphism）"></a>继承和多态（<em>Inheritance and Polymorphism</em>）</h3><ul>
+<li>父类的<strong>所有成员</strong>（除了构造函数和析构函数）都被继承下来，无论能否访问。（<em>private</em>成员也被继承下来，只是不能访问而已）</li>
+<li>向上转型：<code>Base *p = &amp;derived;</code>(由派生类指针转换为基类指针)</li>
+<li>向下转型：<code>dynamic_cast&lt;Derived *&gt;(p)</code>(由基类指针转换为子类指针):如果不能成功，<code>dynamic_cast&lt;T*&gt;</code> 返回空指针，<code>dynamic_cast&lt;T&amp;&gt;</code> 抛出 <code>std::bad_cast</code> 异常。</li>
+</ul>
+<h3 id="符号重载（Operator-Overload）"><a href="#符号重载（Operator-Overload）" class="headerlink" title="符号重载（Operator Overload）"></a>符号重载（<em>Operator Overload</em>）</h3><ul>
+<li><code>++i</code> 返回 <code>i</code> 的引用，<code>i++</code> 返回递增前的 <code>i</code> 的一份拷贝。<ul>
+<li><code>++i</code>：<code>class &amp;operator++()</code></li>
+<li><code>i++</code>：<code>class operator++(int)</code> 其中 <code>int</code> 是一个不被使用的形参，用于区分前置和后置。</li>
+</ul>
+</li>
+<li>赋值、复合赋值都返回左侧运算对象的引用。</li>
+<li>IO运算符：这两个运算符只能是非成员：你无法给 <code>std::istream</code> 和 <code>std:ostream</code> 添加成员。<ul>
+<li><code>std::istream &amp;operator&gt;&gt;(std::istream &amp;, Rational &amp;r);</code></li>
+<li><code>std::ostream &amp;operator&lt;&lt;(std::ostream &amp;, const Rational &amp;r);</code></li>
+</ul>
+</li>
+</ul>
+<h2 id="7-客观题知识点整理"><a href="#7-客观题知识点整理" class="headerlink" title="7. 客观题知识点整理"></a>7. 客观题知识点整理</h2><ul>
+<li>Hw5:<ul>
+<li>Q4: <code>&amp;a</code>返回lvalue，<code>a[3]</code>,<code>*a</code>都是rvalue。</li>
+<li>Q7: std::string s3(); 是函数声明，而非定义空字符串。</li>
+<li>Q9: <code>std::vector v;</code>声明一个vector时必须指定元素类型，或者给出足够条件使得编译器能够推断出元素类型。</li>
+<li>Q10: 永远不能去除底层<code>const</code></li>
+<li>Q12: <code>sizeof()</code>在编译时求值</li>
+<li>Q14：<code>int fun(std::vector&lt;int&gt;)</code>,<code>int fun(std::vector&lt;double&gt;)</code>构成重载。</li>
+</ul>
+</li>
+<li>Hw6:<ul>
+<li>Q7:对于一个类，value-initialization就是default-initialization，调用默认构造函数(大部分情况，在某些情况下会调用zero-initialization)。</li>
+<li>Q8: <code>int* ptr = nullptr; delete[] ptr;</code> &#x2F;&#x2F; 是合法的</li>
+<li>Q10：const成员函数的const是加在<code>this</code>指针上,所以类内的<code>int*</code>指针会被视为<code>int* const</code>，而非<code>const int*</code>，可以修改指针指向的内容。</li>
+<li>Q12：编译器执行析构函数时是在<strong>函数体之后</strong>销毁成员</li>
+<li>Q14：Dynarray中在让<code>m_storage</code>指向新的内存之前，应该先释放原来的内存。(移动赋值和拷贝赋值)</li>
+<li>Q18: unique_pointer只能移动，不能拷贝。</li>
+<li>Q19：拷贝一个shared_ptr会增加引用计数，而不会拷贝指向的对象。</li>
+</ul>
+</li>
+</ul>
 
                 
               </div>
@@ -305,7 +406,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Intro/">#Intro</a>
+        <a href="/tags/CS100/">#CS100</a>
       
     </div>
   
@@ -317,8 +418,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>第一篇博客</div>
-      <div>http://example.com/2023/05/11/第一篇博客/</div>
+      <div>CS100期末Review</div>
+      <div>http://example.com/2023/05/14/CS100期末Review/</div>
     </div>
     <div class="license-meta">
       
@@ -330,7 +431,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年5月11日</div>
+          <div>2023年5月14日</div>
         </div>
       
       
@@ -362,15 +463,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/05/14/CS100%E6%9C%9F%E6%9C%ABReview/" title="CS100期末Review">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">CS100期末Review</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
+                    
+                      <a href="/2023/05/11/%E7%AC%AC%E4%B8%80%E7%AF%87%E5%8D%9A%E5%AE%A2/" title="第一篇博客">
+                        <span class="hidden-mobile">第一篇博客</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
                     
                   </article>
                 </div>
@@ -455,12 +556,6 @@
 
 
   
-
-
-  
-  
-
-
 
 
 
@@ -654,49 +749,6 @@
 
 
   <script>Fluid.plugins.imageCaption();</script>
-
-  
-      <script>
-        if (!window.MathJax) {
-          window.MathJax = {
-            tex    : {
-              inlineMath: { '[+]': [['$', '$']] }
-            },
-            loader : {
-              load: ['ui/lazy']
-            },
-            options: {
-              renderActions: {
-                insertedScript: [200, () => {
-                  document.querySelectorAll('mjx-container').forEach(node => {
-                    let target = node.parentNode;
-                    if (target.nodeName.toLowerCase() === 'li') {
-                      target.parentNode.classList.add('has-jax');
-                    }
-                  });
-                }, '', false]
-              }
-            }
-          };
-        } else {
-          MathJax.startup.document.state(0);
-          MathJax.texReset();
-          MathJax.typeset();
-          MathJax.typesetPromise();
-        }
-
-        Fluid.events.registerRefreshCallback(function() {
-          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
-            MathJax.startup.document.state(0);
-            MathJax.texReset();
-            MathJax.typeset();
-            MathJax.typesetPromise();
-          }
-        });
-      </script>
-    
-
-  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
 
   <script  src="/js/local-search.js" ></script>
 
