@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>KMP与字符串Hash</title>
+    <link href="/2023/10/19/KMP%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2Hash/"/>
+    <url>/2023/10/19/KMP%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2Hash/</url>
+    
+    <content type="html"><![CDATA[<h1 id="KMP与字符串Hash"><a href="#KMP与字符串Hash" class="headerlink" title="KMP与字符串Hash"></a>KMP与字符串Hash</h1><p>最近学习算法时，在KMP和字符哈希上遇到了一些困哪。这篇笔记记录整理对于KMP与字符串哈希的一些个人理解，供自己复习使用。</p><hr><h2 id="KMP"><a href="#KMP" class="headerlink" title="KMP"></a>KMP</h2><p>对于KMP这一个复杂的算法，个人认为在理解上有两个难点，一个是<em><strong>next</strong></em>数组的求解，另一个是利用next数组对于KMP算法的实现。</p><h3 id="next-数组"><a href="#next-数组" class="headerlink" title="next 数组"></a>next 数组</h3><ul><li>假设有一个字符串s(下标从0开始)，那么它以i号位作为结尾的<strong>子串</strong>就是<code>s[0:i]</code><ul><li>对于子串s,长度为k+1的<strong>前缀</strong>和<strong>后缀</strong>就是<code>s[0:k]</code>和<code>s[i-k:i]</code></li></ul></li></ul><p>构造一个int数组<strong>next</strong>。其中，<code>next[i]</code>表示使子串<code>s[0:i]</code>中的<strong>前缀</strong>和<strong>后缀</strong>相等的最大的k，即满足<code>s[0:k] == s[i-k:i]</code>的最大的k。</p><ul><li>相等的前缀和后缀不能是整个字符串，即k不能等于i</li><li>如果不存在这样的k，那么<code>next[i] = -1</code></li><li><code>next[i]</code>就是所求最长相等前后缀中前缀的最后一个字符的下标</li></ul><h3 id="用递推求解-next-数组"><a href="#用递推求解-next-数组" class="headerlink" title="用递推求解 next 数组"></a>用递推求解 next 数组</h3><p>递推求解，即已知<code>next[0]</code>~&#96;next[i-1]<code>，求解</code>next[i]&#96;。</p><ul><li>如果<code>s[next[i-1]+1] == s[i]</code>，那么<code>next[i] = next[i-1] + 1</code></li><li>否则，令<code>k = next[i-1]</code>，如果<code>s[next[k]+1] == s[i]</code>，那么<code>next[i] = next[k] + 1</code>，否则继续令<code>k = next[k]</code>，直到<code>k = -1</code>或者<code>s[next[k]+1] == s[i]</code>为止。</li></ul><p>看一个例子：<br>现在让 s &#x3D; “abababc”</p><ol><li>假设已经有了next[0]~next[3],求解next[4]<img src="https://imghubforks-1318113821.cos.ap-shanghai.myqcloud.com/202310190107783.png"/></li></ol><ul><li>当已经得到 next[3] &#x3D; 1 时，最长相等前后缀为 “ab”，之后计算 next[4] 时，由于 s[4] &#x3D;&#x3D; s[next[3] + 1] (这里的为什么要用 next[3]？想想至尊概念)，因此可以把最长相等前后缀 “ab” 扩展为 “aba”，因此 next[4] &#x3D; next[3] + 1，并令 j 指向 next[4]。</li></ul><ol start="2"><li>假设已经有了next[0]~next[4],求解next[5]</li></ol><p><img src="https://imghubforks-1318113821.cos.ap-shanghai.myqcloud.com/202310190117515.png"><br><img src="https://imghubforks-1318113821.cos.ap-shanghai.myqcloud.com/202310190119598.png"/></p><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs cpp">next[<span class="hljs-number">0</span>] = <span class="hljs-number">-1</span>;<br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">1</span>, j = <span class="hljs-number">-1</span>; i &lt; len; i ++)<span class="hljs-comment">// j 表示最长相等前后缀的最后一个字符的下标</span><br>&#123;<br>    <span class="hljs-keyword">while</span> (j != <span class="hljs-number">-1</span> &amp;&amp; s[i] != s[j + <span class="hljs-number">1</span>]) <span class="hljs-comment">// 前后缀匹配不成功</span><br>    &#123;<br>        <span class="hljs-comment">// 反复令 j 回退到 -1，或是 s[i] == s[j + 1]</span><br>        j = next[j];<br>    &#125;<br>    <span class="hljs-keyword">if</span> (s[i] == s[j + <span class="hljs-number">1</span>]) <span class="hljs-comment">// 匹配成功</span><br>    &#123;<br>        j ++; <span class="hljs-comment">// 最长相等前后缀变长</span><br>    &#125;<br>    next[i] = j; <span class="hljs-comment">// 令 next[i] = j</span><br>&#125;   <br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>知识整理</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>经济学导论Revision</title>
     <link href="/2023/06/01/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%AF%BC%E8%AE%BARevision/"/>
     <url>/2023/06/01/%E7%BB%8F%E6%B5%8E%E5%AD%A6%E5%AF%BC%E8%AE%BARevision/</url>
@@ -33,7 +52,7 @@
     
     <tags>
       
-      <tag>CS100</tag>
+      <tag>知识整理</tag>
       
     </tags>
     
