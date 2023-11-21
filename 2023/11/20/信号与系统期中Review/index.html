@@ -1,0 +1,1012 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="KesonStar">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="Signal and System 期中ReviewChapter 0(1) Preknowledge $z&#x3D;Re{z}+j*Im{z}$ $z&#x3D;|z|e^{j\theta}$ $z^{}&#x3D;|z|e^{-j\theta}&#x3D;Rez-jImz$  $\cos \theta&#x3D;\frac{e^{j\theta} +e^{-j\theta}}{2}$ $\s">
+<meta property="og:type" content="article">
+<meta property="og:title" content="信号与系统期中Review">
+<meta property="og:url" content="http://example.com/2023/11/20/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F%E6%9C%9F%E4%B8%ADReview/index.html">
+<meta property="og:site_name" content="KesonStar&#39;s Blog">
+<meta property="og:description" content="Signal and System 期中ReviewChapter 0(1) Preknowledge $z&#x3D;Re{z}+j*Im{z}$ $z&#x3D;|z|e^{j\theta}$ $z^{}&#x3D;|z|e^{-j\theta}&#x3D;Rez-jImz$  $\cos \theta&#x3D;\frac{e^{j\theta} +e^{-j\theta}}{2}$ $\s">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://imghubforks-1318113821.cos.ap-shanghai.myqcloud.com/202311211048509.png">
+<meta property="og:image" content="https://imghubforks-1318113821.cos.ap-shanghai.myqcloud.com/202311211128070.png">
+<meta property="og:image" content="https://imghubforks-1318113821.cos.ap-shanghai.myqcloud.com/202311211846775.png">
+<meta property="article:published_time" content="2023-11-20T08:20:51.000Z">
+<meta property="article:modified_time" content="2023-11-21T10:54:27.043Z">
+<meta property="article:author" content="KesonStar">
+<meta property="article:tag" content="信号与系统, Review">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://imghubforks-1318113821.cos.ap-shanghai.myqcloud.com/202311211048509.png">
+  
+  
+  
+  <title>信号与系统期中Review - KesonStar&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>KesonStar&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="信号与系统期中Review"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-11-20 16:20" pubdate>
+          2023年11月20日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          10k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          85 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">信号与系统期中Review</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="Signal-and-System-期中Review"><a href="#Signal-and-System-期中Review" class="headerlink" title="Signal and System 期中Review"></a>Signal and System 期中Review</h1><h2 id="Chapter-0"><a href="#Chapter-0" class="headerlink" title="Chapter 0"></a>Chapter 0</h2><h3 id="1-Preknowledge"><a href="#1-Preknowledge" class="headerlink" title="(1) Preknowledge"></a>(1) Preknowledge</h3><ol>
+<li>$z&#x3D;Re{z}+j*Im{z}$</li>
+<li>$z&#x3D;|z|e^{j\theta}$</li>
+<li>$z^{<em>}&#x3D;|z|e^{-j\theta}&#x3D;Rez-j</em>Imz$</li>
+<li><ul>
+<li>$\cos \theta&#x3D;\frac{e^{j\theta} +e^{-j\theta}}{2}$</li>
+<li>$\sin \theta&#x3D;\frac{e^{j\theta} -e^{-j\theta}}{2j}$</li>
+</ul>
+</li>
+<li>$\displaystyle \sum_{n&#x3D;0}^{\infty}(z_0)^n&#x3D;\frac{1}{1-z_0}$ iff $|z_0|&lt;1$</li>
+</ol>
+<hr>
+<h2 id="Chapter-1"><a href="#Chapter-1" class="headerlink" title="Chapter 1"></a>Chapter 1</h2><h3 id="1-Energy-and-Power"><a href="#1-Energy-and-Power" class="headerlink" title="(1) Energy and Power"></a>(1) Energy and Power</h3><ol>
+<li>For any signal $x(t)$ or $x[n]$, we can define its total energy as:<br>$$E&#x3D;\int_{-\infty}^{\infty}|x(t)|^2dt$$</li>
+</ol>
+<p>$$E&#x3D;\sum_{n&#x3D;-\infty}^{\infty}|x[n]|^2$$</p>
+<ol start="2">
+<li>The average power is defined as:<br>$$P&#x3D;\frac{E}{t_2-t_1}$$</li>
+</ol>
+<p>$$P&#x3D;\frac{E}{n_2-n_1+1}$$</p>
+<ol start="2">
+<li>Over infinite time interval</li>
+</ol>
+<ul>
+<li>Continuous:$E_{\infty}&#x3D;\lim_{T \to \infty}\int_{-T}^{T}|x(t)|^2dt &#x3D; \int_\infty^\infty |x(t)|^2dt$</li>
+<li>Discrete:$E_{\infty}&#x3D;\lim_{N \to \infty}\sum_{n&#x3D;-N}^{N}|x[n]|^2 &#x3D; \sum_{n&#x3D;-\infty}^\infty |x[n]|^2$</li>
+<li>$P&#x3D;\lim_{T \to \infty}\frac{1}{2T}\int_{-T}^{T}|x(t)|^2dt$</li>
+<li>$P&#x3D;\lim_{N \to \infty}\frac{1}{2N+1}\sum_{n&#x3D;-N}^{N}|x[n]|^2$</li>
+</ul>
+<p>3. </p>
+<ul>
+<li>Finite energe signals: $E&lt;\infty$,$P&#x3D;0$</li>
+<li>Finite power signals: $P&lt;\infty$,$E&#x3D;\infty$</li>
+<li>Infinite energy signals: $E&#x3D;\infty$</li>
+<li>Infinite power signals: $P&#x3D;\infty$</li>
+</ul>
+<h3 id="2-Unit-Impulse-Function-and-Unit-Step-Function"><a href="#2-Unit-Impulse-Function-and-Unit-Step-Function" class="headerlink" title="(2) Unit Impulse Function and Unit Step Function"></a>(2) Unit Impulse Function and Unit Step Function</h3><ol>
+<li><p>Unit impulse is defined as:<br>$\delta[n]&#x3D;\begin{cases}<br>0, &amp; n&#x3D;1\<br>1, &amp; n&#x3D;0<br>\end{cases}$<br>$\delta(t)&#x3D;\begin{cases}<br>0, &amp; t&#x3D;1\<br>1, &amp; t&#x3D;0<br>\end{cases}$  </p>
+</li>
+<li><p>Unit step is defined as:<br>$u[n]&#x3D;\begin{cases}<br>0, &amp; n&lt;0\<br>1, &amp; n&gt; 0<br>\end{cases}$<br>$u(t)&#x3D;\begin{cases}<br>0, &amp; t&lt;0\<br>1, &amp; t&gt; 0<br>\end{cases}$</p>
+</li>
+<li><p>Sampling property</p>
+</li>
+</ol>
+<ul>
+<li>$x[n]\delta[n-n_0]&#x3D;x[n_0]\delta[n-n_0]$</li>
+<li>$x(t)\delta(t-t_0)&#x3D;x(t_0)\delta(t-t_0)$</li>
+</ul>
+<h3 id="3-Basic-System-Properties"><a href="#3-Basic-System-Properties" class="headerlink" title="(3) Basic System Properties"></a>(3) Basic System Properties</h3><ol>
+<li>With Memory:Output depends on current and previous inputs</li>
+<li>Invertible:If $x_1(t)&#x3D;x_2(t)$,then $y_1(t)&#x3D;y_2(t)$</li>
+<li>Causal:Output depends on inputs at the present and past time</li>
+<li>Stable:If $|x(t)|&lt;\infty$,then $|y(t)|&lt;\infty$  </li>
+<li>Time Invariant:a time shift in the input signal causes the same time shift in the output signal</li>
+</ol>
+<ul>
+<li>Check $f({x(t-t_0)})$(which only do the change on t) is equal to $y(t-t_0)$(which do the change on $t-t_0$)</li>
+</ul>
+<ol start="6">
+<li>Linearity: $f(ax_1(t)+bx_2(t))&#x3D;ay_1(t)+by_2(t)$</li>
+</ol>
+<hr>
+<h2 id="Chapter-2"><a href="#Chapter-2" class="headerlink" title="Chapter 2"></a>Chapter 2</h2><h3 id="1-Linear-Time-Invariant-LTI-Systems"><a href="#1-Linear-Time-Invariant-LTI-Systems" class="headerlink" title="(1) Linear Time Invariant(LTI) Systems"></a>(1) Linear Time Invariant(LTI) Systems</h3><ol>
+<li>Impulse response: $h(t)&#x3D;f(\delta(t))$</li>
+</ol>
+<h3 id="2-Properties-of-LTI-Systems"><a href="#2-Properties-of-LTI-Systems" class="headerlink" title="(2) Properties of LTI Systems"></a>(2) Properties of LTI Systems</h3><ol>
+<li>Commutative: $x(t)*h(t)&#x3D;h(t)*x(t)$</li>
+<li>Associative: $x(t)*[h_1(t)*h_2(t)]&#x3D;[x(t)*h_1(t)]*h_2(t)$</li>
+<li>Distributive: $x(t)*[h_1(t)+h_2(t)]&#x3D;x(t)*h_1(t)+x(t)*h_2(t)$</li>
+<li>Without Memory: </li>
+<li><ul>
+<li>$h[n]&#x3D;0$ for $n\neq 0$  </li>
+<li>$h(t)&#x3D;0$ for $t\neq 0$</li>
+</ul>
+</li>
+<li>Invertibility: $h_0(t)*h_1(t)&#x3D;\delta(t)$ then, the system with impulse response $h_1(t)$ is the inverse of the system with impulse response $h_0(t)$</li>
+<li>Causality: $h(t)&#x3D;0$ for $t&lt;0$<ul>
+<li>Equivalent to the condition of initial rest: if $t\le t_0,x(t)&#x3D;0$, then $y(t_0)&#x3D;0 $</li>
+</ul>
+</li>
+<li>Stability: Absolutely summable&#x2F;absolutely integrable<ul>
+<li>$\int_{-\infty}^{\infty}|h(\tau)|d\tau&lt;\infty$</li>
+<li>$h[n]&#x3D;\sum_{n&#x3D;-\infty}^{\infty}|h[n]|&lt;\infty$</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="Chapter-3"><a href="#Chapter-3" class="headerlink" title="Chapter 3"></a>Chapter 3</h2><h3 id="1-The-response-of-LTI-systems-to-complex-exponential-signals"><a href="#1-The-response-of-LTI-systems-to-complex-exponential-signals" class="headerlink" title="(1) The response of LTI systems to complex exponential signals"></a>(1) The response of LTI systems to complex exponential signals</h3><ol>
+<li>Let $x(t)&#x3D;e^{st}$<ul>
+<li>$y(t)&#x3D;H(s)e^{st}$, where $H(s)&#x3D;\int_{-\infty}^{\infty}h(\tau)e^{-s\tau}d\tau$</li>
+<li>$e^{st}$ is an eigenfunction of LTI system and $H(s)$ is the corresponding eigenvalue</li>
+</ul>
+</li>
+<li>Let $x[n]&#x3D;z^n$<ul>
+<li>$y[n]&#x3D;H(z)z^n$, where $H(z)&#x3D;\sum_{n&#x3D;-\infty}^{\infty}h[n]z^{-n}$</li>
+<li>$z^n$ is an eigenfunction of LTI system and $H(z)$ is the corresponding eigenvalue</li>
+</ul>
+</li>
+</ol>
+<h3 id="2-Fourier-series-representation-of-periodic-signals"><a href="#2-Fourier-series-representation-of-periodic-signals" class="headerlink" title="(2) Fourier series representation of periodic signals"></a>(2) Fourier series representation of periodic signals</h3><ol>
+<li>Continuous-time periodic signals<ul>
+<li>$x(t)&#x3D;\sum_{k&#x3D;-\infty}^{\infty}a_ke^{jk\omega_0t}$  —<strong>Synthesis equation</strong></li>
+<li>$a_k&#x3D;\frac{1}{T_0}\int_{T_0}x(t)e^{-jk\omega_0t}dt$ —<strong>Analysis equation</strong></li>
+<li>$T_0$ is the period of $x(t)$</li>
+<li>$\omega_0&#x3D;\frac{2\pi}{T_0}$</li>
+</ul>
+</li>
+</ol>
+<p><strong>e.g.</strong> The square wave<br><img src="https://imghubforks-1318113821.cos.ap-shanghai.myqcloud.com/202311211048509.png" srcset="/img/loading.gif" lazyload/></p>
+<p><strong>Conclusion</strong>:    $\displaystyle a_k&#x3D;\frac{2T_1}{T}\frac{\sin (k\omega_0 T_1)}{k\omega_0T_1}&#x3D;\frac{\sin (k\omega_0T_1)}{k\pi},k\neq 0$</p>
+<h3 id="3-Convergence-of-Fourier-series"><a href="#3-Convergence-of-Fourier-series" class="headerlink" title="(3) Convergence of Fourier series"></a>(3) Convergence of Fourier series</h3><ol>
+<li>Finite energy condition: $\displaystyle \int_{-\infty}^{\infty}|x(t)|^2dt&lt;\infty$</li>
+<li>Dirichlet conditions:<ul>
+<li>$x(t)$ is <strong>absolutely integrable</strong> over any finite interval</li>
+<li>$x(t)$ has a <strong>finite number of maxima and minima</strong> in any finite interval</li>
+<li>$x(t)$ has a <strong>finite number of discontinuities</strong> in any finite interval</li>
+</ul>
+</li>
+</ol>
+<h3 id="4-Properties-of-Fourier-series"><a href="#4-Properties-of-Fourier-series" class="headerlink" title="(4) Properties of Fourier series"></a>(4) Properties of Fourier series</h3><ol>
+<li>Linearity: <ul>
+<li>$x(t)\stackrel{FS}{\longleftrightarrow} a_k$, $y(t)\stackrel{FS}{\longleftrightarrow} b_k \Rightarrow ax(t)+by(t)\stackrel{FS}{\longleftrightarrow} Aa_k+Bb_k$</li>
+</ul>
+</li>
+<li>Time shifting: <ul>
+<li>$x(t)\stackrel{FS}{\longleftrightarrow} a_k \Rightarrow y(t)&#x3D;x(t-t_0)\stackrel{FS}{\longleftrightarrow} a_ke^{-jk\omega_0t_0}$</li>
+</ul>
+</li>
+<li>Time reversal: <ul>
+<li>$x(t)\stackrel{FS}{\longleftrightarrow} a_k \Rightarrow y(t)&#x3D;x(-t)\stackrel{FS}{\longleftrightarrow} a_{-k}$</li>
+</ul>
+</li>
+<li>Time scaling: <ul>
+<li>$x(t)\stackrel{FS}{\longleftrightarrow} a_k \Rightarrow y(t)&#x3D;x(at)\stackrel{FS}{\longleftrightarrow} a_k$</li>
+</ul>
+</li>
+<li>Multiplication: <ul>
+<li>$x(t)\stackrel{FS}{\longleftrightarrow} a_k$, $y(t)\stackrel{FS}{\longleftrightarrow} b_k \Rightarrow z(t)&#x3D;x(t)y(t)\stackrel{FS}{\longleftrightarrow}\sum_{l&#x3D;-\infty}^\infty a_lb_{k-l}$</li>
+</ul>
+</li>
+<li>Conjugation and conjugate symmetry: <ul>
+<li>$x(t)\stackrel{FS}{\longleftrightarrow} a_k \Rightarrow x^*(t)\stackrel{FS}{\longleftrightarrow} a_{-k}^*$</li>
+<li>If $x(t)$ is real, then $a_k&#x3D;a_{-k}^*$<ul>
+<li>If $x(t)$ is real and even, then $a_k$ is real and even</li>
+<li>If $x(t)$ is real and odd, then $a_k$ is imaginary and odd</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Differentiation: <ul>
+<li>$x(t)\stackrel{FS}{\longleftrightarrow} a_k \Rightarrow y(t)&#x3D;\frac{dx(t)}{dt}\stackrel{FS}{\longleftrightarrow} jk\omega_0a_k$</li>
+</ul>
+</li>
+<li>Integration:<ul>
+<li>$x(t)\stackrel{FS}{\longleftrightarrow} a_k \Rightarrow y(t)&#x3D;\int_{-\infty}^tx(\tau)d\tau\stackrel{FS}{\longleftrightarrow} \frac{a_k}{jk\omega_0}$</li>
+</ul>
+</li>
+<li>Frequency shifting:<ul>
+<li>$x(t)\stackrel{FS}{\longleftrightarrow} a_k \Rightarrow y(t)&#x3D;x(t)e^{jM\omega_0t}\stackrel{FS}{\longleftrightarrow} a_{k-M}$</li>
+</ul>
+</li>
+<li>Periodic convolution:</li>
+</ol>
+<ul>
+<li>$x(t)\stackrel{FS}{\longleftrightarrow} a_k$, $y(t)\stackrel{FS}{\longleftrightarrow} b_k \Rightarrow z(t)&#x3D;x(t)*y(t)\stackrel{FS}{\longleftrightarrow} Ta_kb_k$</li>
+</ul>
+<ol start="11">
+<li>Parseval’s theorem:</li>
+</ol>
+<ul>
+<li>$\displaystyle \sum_{k&#x3D;-\infty}^{\infty}|a_k|^2&#x3D;\frac{1}{T}\int_{T}|x(t)|^2dt$</li>
+</ul>
+<h3 id="5-Fourier-series-for-discrete-time-periodic-signals"><a href="#5-Fourier-series-for-discrete-time-periodic-signals" class="headerlink" title="(5) Fourier series for discrete-time periodic signals"></a>(5) Fourier series for discrete-time periodic signals</h3><ul>
+<li>$x[n]&#x3D;\sum_{k&#x3D;-\infty}^{\infty}a_ke^{jk\omega_0n}$  —<strong>Synthesis equation</strong></li>
+<li>$a_k&#x3D;\frac{1}{N}\sum_{n&#x3D;0}^{N-1}x[n]e^{-jk\omega_0n}$ —<strong>Analysis equation</strong></li>
+<li>$a_k$ is periodic with period $N$,that is, $a_k&#x3D;a_{k+rN}$</li>
+</ul>
+<p>e.g. The square wave for discrete-time</p>
+<ul>
+<li><p>$\displaystyle a_k&#x3D;\frac{\sin(\pi k)}{N\sin(\frac{\pi}{N}k)}$ when $k\neq 0,\pm kN$</p>
+</li>
+<li><p>$\displaystyle a_k&#x3D; \frac{2N_1+1}{N}$ when $k&#x3D;0,\pm kN$</p>
+</li>
+<li><p>Properties</p>
+<img src="https://imghubforks-1318113821.cos.ap-shanghai.myqcloud.com/202311211128070.png" srcset="/img/loading.gif" lazyload/></li>
+</ul>
+<h3 id="6-Fourier-series-and-LTI-systems"><a href="#6-Fourier-series-and-LTI-systems" class="headerlink" title="(6) Fourier series and LTI systems"></a>(6) Fourier series and LTI systems</h3><ol>
+<li>CT system<ul>
+<li>$H(s) &#x3D; \int_{-\infty}^{\infty}h(\tau)e^{-s\tau}d\tau \Rightarrow H(j\omega)&#x3D;\int_{-\infty}^{\infty}h(\tau)e^{-j\omega\tau}d\tau$</li>
+<li>$e^{j\omega t}\to H(j\omega)e^{j\omega t}$<br><strong>Conclusion: $b_k&#x3D;a_kH(j\omega_0)$</strong></li>
+</ul>
+</li>
+<li>DT system<ul>
+<li>$H(z) &#x3D; \sum_{n&#x3D;-\infty}^{\infty}h[n]z^{-n} \Rightarrow H(e^{j\omega})&#x3D;\sum_{n&#x3D;-\infty}^{\infty}h[n]e^{-j\omega n}$</li>
+<li>$z^n\to H(e^{j\omega})z^n$<br><strong>Conclusion: $b_k&#x3D;a_kH(e^{j\omega_0})$</strong></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="Chapter-4"><a href="#Chapter-4" class="headerlink" title="Chapter 4"></a>Chapter 4</h2><h3 id="1-Fourier-transform-and-Inverse-Fourier-transform"><a href="#1-Fourier-transform-and-Inverse-Fourier-transform" class="headerlink" title="(1) Fourier transform and Inverse Fourier transform"></a>(1) Fourier transform and Inverse Fourier transform</h3><ol>
+<li>$\displaystyle X(j\omega)&#x3D;\int_{-\infty}^{\infty}x(t)e^{-j\omega t}dt$</li>
+<li>$\displaystyle x(t)&#x3D;\frac{1}{2\pi}\int_{-\infty}^{\infty}X(j\omega)e^{j\omega t}d\omega$</li>
+<li>Convergence of FT: The same as Fourier series.</li>
+</ol>
+<p><strong>Regular Fourier Transform:</strong></p>
+<ul>
+<li>$x_1(t)&#x3D;\delta(t)\to X_1(j\omega)&#x3D;1$</li>
+<li>$x_2(t)&#x3D;1\to X_2(j\omega)&#x3D;2\pi\delta(\omega)$</li>
+<li>$x(t)&#x3D;e^{-at}u(t),a&gt;0\to X(j\omega)&#x3D;\frac{1}{a+j\omega}$</li>
+<li>$x(t)&#x3D;e^{-a|t|},a&gt;0\to X(j\omega)&#x3D;\frac{2a}{\omega^2+a^2}$</li>
+<li>$\displaystyle x(t)&#x3D;\begin{cases}<br>  1,|t|&lt;T_1\<br>  0,|t|&gt;T_1<br>\end{cases}\to X(j\omega)&#x3D;\int_{T_1}^{T_1}e^{-j\omega t}dt&#x3D;\frac{2\sin \omega T_1}{\omega}$</li>
+<li>$\displaystyle X(j\omega)&#x3D;\begin{cases}<br> 1,|\omega|&lt;W \<br> 0,|\omega|&gt;W<br>\end{cases}\to x(t)&#x3D;\frac{W}{\pi}\frac{\sin Wt}{Wt}$</li>
+</ul>
+<ol start="4">
+<li>A periodic signal can be represented by a FS, but also a FT</li>
+</ol>
+<ul>
+<li>x(t) &#x3D; $\displaystyle \sum_{k&#x3D;-\infty}^{\infty}a_ke^{jk\omega_0t} \to X(j\omega)&#x3D;2\pi\sum_{k&#x3D;-\infty}^{\infty}a_k\delta(\omega-k\omega_0)$</li>
+</ul>
+<p><strong>Regular FT for periodic signals</strong></p>
+<ul>
+<li>$x(t)&#x3D;\sin \omega_0 t \to X(j\omega)&#x3D;\frac{\pi}{j}[\delta(\omega-\omega_0)-\delta(\omega+\omega_0)]$</li>
+<li>$x(t)&#x3D;\cos \omega_0 t \to X(j\omega)&#x3D;\pi[\delta(\omega-\omega_0)+\delta(\omega+\omega_0)]$</li>
+</ul>
+<h3 id="2-Properties-of-Fourier-transform"><a href="#2-Properties-of-Fourier-transform" class="headerlink" title="(2) Properties of Fourier transform"></a>(2) Properties of Fourier transform</h3><ol>
+<li>Linearity: <ul>
+<li>$x(t)\stackrel{FT}{\longleftrightarrow} X(j\omega)$, $y(t)\stackrel{FT}{\longleftrightarrow} Y(j\omega) \Rightarrow ax(t)+by(t)\stackrel{FT}{\longleftrightarrow} aX(j\omega)+bY(j\omega)$</li>
+</ul>
+</li>
+<li>Time shifting: <ul>
+<li>$x(t)\stackrel{FT}{\longleftrightarrow} X(j\omega) \Rightarrow y(t)&#x3D;x(t-t_0)\stackrel{FT}{\longleftrightarrow} X(j\omega)e^{-j\omega t_0}$</li>
+</ul>
+</li>
+<li>Time reversal: <ul>
+<li>$x(t)\stackrel{FT}{\longleftrightarrow} X(j\omega) \Rightarrow y(t)&#x3D;x(-t)\stackrel{FT}{\longleftrightarrow} X(-j\omega)$</li>
+</ul>
+</li>
+<li>Conjugation and Conjugate Symmetry<ul>
+<li>$x(t)\stackrel{FT}{\longleftrightarrow} X(j\omega) \Rightarrow x^*(t)\stackrel{FT}{\longleftrightarrow} X^*(-j\omega)$<ul>
+<li>If $x(t)$ is real, then $X(-j\omega)&#x3D;X^*(j\omega)$</li>
+<li>If $x(t)$ is real and even, then $X(j\omega)$ is real and even</li>
+<li>If $x(t)$ is real and odd, then $X(j\omega)$ is imaginary and odd</li>
+<li>If $x(t)$ is imaginary and even, then $X(j\omega)$ is imaginary and even</li>
+<li>If $x(t)$ is imaginary and odd, then $X(j\omega)$ is real and odd</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Differentiation: <ul>
+<li>$x(t)\stackrel{FT}{\longleftrightarrow} X(j\omega) \Rightarrow y(t)&#x3D;\frac{dx(t)}{dt}\stackrel{FT}{\longleftrightarrow} j\omega X(j\omega)$</li>
+</ul>
+</li>
+<li>Integration:<ul>
+<li>$x(t)\stackrel{FT}{\longleftrightarrow} X(j\omega) \Rightarrow y(t)&#x3D;\int_{-\infty}^tx(\tau)d\tau\stackrel{FT}{\longleftrightarrow} \frac{X(j\omega)}{j\omega}+\pi X(0)\delta(\omega)$<ul>
+<li>$F(u(t))&#x3D;\frac{1}{j\omega}+\pi\delta(\omega)$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Time and frequency scaling: <ul>
+<li>$x(t)\stackrel{FT}{\longleftrightarrow} X(j\omega) \Rightarrow y(t)&#x3D;x(at)\stackrel{FT}{\longleftrightarrow} \frac{1}{|a|}X(\frac{j\omega}{a})$</li>
+</ul>
+</li>
+<li>Duality: <ul>
+<li>$x(t)\stackrel{FT}{\longleftrightarrow} X(j\omega) \Rightarrow X(t)\stackrel{FT}{\longleftrightarrow} 2\pi x(-j\omega)$<ul>
+<li>括号内 $j\omega$ 与t互换，括号外 $\omega$ 与t互换</li>
+<li>Other Properties<img src="https://imghubforks-1318113821.cos.ap-shanghai.myqcloud.com/202311211846775.png" srcset="/img/loading.gif" lazyload/></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Parseval’s relation<ul>
+<li>$\displaystyle \int_{-\infty}^{\infty}|x(t)|^2dt&#x3D;\frac{1}{2\pi}\int_{-\infty}^{\infty}|X(j\omega)|^2d\omega$</li>
+</ul>
+</li>
+<li>Convolution Properties<ul>
+<li>$y(t)&#x3D;x(t)*h(t)\stackrel{FT}{\longleftrightarrow} X(j\omega)H(j\omega)$<ul>
+<li>Only stable system have $H(j\omega)$</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Multiplication Properties<ul>
+<li>$y(t)&#x3D;x(t)h(t)\stackrel{FT}{\longleftrightarrow} \frac{1}{2\pi}X(j\omega)*H(j\omega)$</li>
+</ul>
+</li>
+</ol>
+<h3 id="3-System-characterized-by-LTI-differential-equations"><a href="#3-System-characterized-by-LTI-differential-equations" class="headerlink" title="(3) System characterized by LTI differential equations"></a>(3) System characterized by LTI differential equations</h3><p>$\displaystyle \sum_{k&#x3D;0}^N a_k \frac{d^ky(t)}{dt^k}&#x3D;\sum_{k&#x3D;0}^Mb_k\frac{d^kx(t)}{dt^k}$<br>$\Rightarrow\displaystyle H(j\omega)&#x3D;\frac{Y(j\omega)}{X(j\omega)}&#x3D;\frac{\sum_{k&#x3D;0}^Mb_k(j\omega)^k}{\sum_{k&#x3D;0}^Na_k(j\omega)^k}$</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/" class="category-chain-item">知识整理</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E4%BF%A1%E5%8F%B7%E4%B8%8E%E7%B3%BB%E7%BB%9F-Review/">#信号与系统, Review</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>信号与系统期中Review</div>
+      <div>http://example.com/2023/11/20/信号与系统期中Review/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>KesonStar</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年11月20日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/10/19/KMP%E4%B8%8E%E5%AD%97%E7%AC%A6%E4%B8%B2Hash/" title="KMP与字符串Hash">
+                        <span class="hidden-mobile">KMP与字符串Hash</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"YTiAHB0a5m8ZOZhIASKxkIew-gzGzoHsz","appKey":"PtYkSyZzkj5B6xRgZ4LRb84w","path":"window.location.pathname","placeholder":null,"avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
