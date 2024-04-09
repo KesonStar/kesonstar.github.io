@@ -1,0 +1,890 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="KesonStar">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="CA Midterm1 ReviewL01: Great Ideas in Computer Architecture Anything can be represented as a number. Moore’s Law: The number of transistors on a chip doubles every two years. Prediced based on observa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CA Midterm1">
+<meta property="og:url" content="http://example.com/2024/04/08/CA-Midterm1/index.html">
+<meta property="og:site_name" content="KesonStar&#39;s Blog">
+<meta property="og:description" content="CA Midterm1 ReviewL01: Great Ideas in Computer Architecture Anything can be represented as a number. Moore’s Law: The number of transistors on a chip doubles every two years. Prediced based on observa">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://imghubforks-1318113821.cos.ap-shanghai.myqcloud.com/202404081441790.png">
+<meta property="og:image" content="https://imghubforks-1318113821.cos.ap-shanghai.myqcloud.com/202404081505642.png">
+<meta property="og:image" content="https://imghubforks-1318113821.cos.ap-shanghai.myqcloud.com/202404091516163.png">
+<meta property="article:published_time" content="2024-04-08T05:02:03.000Z">
+<meta property="article:modified_time" content="2024-04-09T15:27:59.827Z">
+<meta property="article:author" content="KesonStar">
+<meta property="article:tag" content="Review">
+<meta property="article:tag" content="CA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://imghubforks-1318113821.cos.ap-shanghai.myqcloud.com/202404081441790.png">
+  
+  
+  
+  <title>CA Midterm1 - KesonStar&#39;s Blog</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>KesonStar&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="CA Midterm1"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2024-04-08 13:02" pubdate>
+          2024年4月8日 下午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.2k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          19 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">CA Midterm1</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="CA-Midterm1-Review"><a href="#CA-Midterm1-Review" class="headerlink" title="CA Midterm1 Review"></a>CA Midterm1 Review</h1><h2 id="L01-Great-Ideas-in-Computer-Architecture"><a href="#L01-Great-Ideas-in-Computer-Architecture" class="headerlink" title="L01: Great Ideas in Computer Architecture"></a>L01: Great Ideas in Computer Architecture</h2><ol>
+<li>Anything can be <strong>represented as a number</strong>.</li>
+<li><strong>Moore’s Law:</strong> The number of transistors on a chip doubles every two years.<ul>
+<li>Prediced based on <strong>observation</strong> of the trend in the number of transistors on a chip.</li>
+</ul>
+</li>
+<li><strong>Amdahl’s Law</strong>: The speedup of a program using multiple processors in parallel computing is limited by the time needed for the sequential fraction of the program.<ul>
+<li>$S_{\text{speedup}} &#x3D; \frac{1}{(1 - f) + \frac{f}{n}}$<ul>
+<li>$f$: fraction of the program that must be executed sequentially</li>
+<li>$n$: number of processors</li>
+</ul>
+</li>
+<li>Execution time after improvement &#x3D; Time affected&#x2F;Amount of Parallelism + Time not effected</li>
+</ul>
+</li>
+<li><strong>Memory Hierarchy</strong>: The more regularly used, the closer to CPU, the faster it will be.<ul>
+<li>CPU registers is the fastest, SSD is slowest.</li>
+</ul>
+</li>
+<li><strong>Parallelism&#x2F;Pipeline</strong>: Divide the work into multiple stages and execute them in parallel, then join them together.</li>
+<li><strong>Performance Measurement and Improvement</strong><ul>
+<li>Performance: The amount of work done in a given time.</li>
+<li>Performance Improvement: Increase the performance by increasing the speed of the CPU, increasing the number of CPUs, or increasing the number of instructions executed per cycle.</li>
+</ul>
+</li>
+<li><strong>Dependability via Redundancy</strong><ul>
+<li>Redundancy to avoid a failing piece causing the whole system to fail.</li>
+<li>Applies to everything from datacenter to storage to memory to   instructors(datacenters, disks, memory bits).</li>
+</ul>
+</li>
+</ol>
+<h2 id="L02-Info-Representation"><a href="#L02-Info-Representation" class="headerlink" title="L02: Info Representation"></a>L02: Info Representation</h2><h3 id="1-Binary"><a href="#1-Binary" class="headerlink" title="1. Binary"></a>1. Binary</h3><ul>
+<li><strong>Bit</strong>: The smallest unit of data.<ul>
+<li>4-bit: 1 nibble, 8-bit: 1 byte, 16-bit: 1 half word, 32-bit: 1 word.</li>
+</ul>
+</li>
+<li>Everything can be represented as a number. <ul>
+<li>Images, sounds, videos, etc. are all represented as numbers.</li>
+<li><strong>Not necessarily binary</strong>,i.e., the assertion that everything in a computer is represented as binary is false.</li>
+</ul>
+</li>
+<li><strong>Least Significant Bit</strong>(LSB Bit 0) and <strong>Most Significant Bit</strong>(MSB Bit 31).</li>
+</ul>
+<h3 id="2-Signed-Integers"><a href="#2-Signed-Integers" class="headerlink" title="2. Signed Integers"></a>2. Signed Integers</h3><ul>
+<li>Totally <strong>three ways</strong> to represent signed integers.<ol>
+<li><strong>Sign-Magnitude</strong>: The leftmost bit is the sign bit, 0 for positive, 1 for negative. Others stay the same.<ul>
+<li>The range is $-2^{n-1}-1 \leq x \leq 2^{n-1} - 1$</li>
+<li>Arithmetic unfriendly</li>
+</ul>
+</li>
+<li><strong>One’s Complement</strong>: Positive numbers are the same as the binary representation, negative numbers are the bitwise NOT of the positive number.(Flip all the bits)<ul>
+<li>It still has a signed bit.</li>
+<li>The range is $-2^{n-1}-1 \leq x \leq 2^{n-1} - 1$</li>
+<li>Arithmetic unfriendly</li>
+</ul>
+</li>
+<li><strong>Two’s Complement</strong>: The negative number is the bitwise NOT of the positive number plus 1. Positive one stay unchanged.<ul>
+<li>The range is $-2^{n-1} \leq x \leq 2^{n-1} - 1$</li>
+<li>Arithmetic friendly</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="3-Floating-Point-Numbers"><a href="#3-Floating-Point-Numbers" class="headerlink" title="3. Floating Point Numbers"></a>3. Floating Point Numbers</h3><ul>
+<li><strong>FP32</strong> <img src="https://imghubforks-1318113821.cos.ap-shanghai.myqcloud.com/202404081441790.png" srcset="/img/loading.gif" lazyload/>
+ - Special cases:
+   - **Overflow**($>2.0\times 2^{128}, <-2.0\times 2^{128}$): $\pm \infty$
+     - All exponent = 1s and All mantissa = 0s
+   - **Underflow**($<1\times 2^{-127},>-1\times 2^{-127}$)
+     - Denormalized: Let exponent all 0s, representing -126, and mantissa has no implicit leading 1.
+     - Range ($-2^{-23}*2^{-126}\sim 2^{-23}\times 2^{-126}$)
+   - **NAN**: $0\times \infty$, $\sqrt{n},n<0$, $\frac{0}{0},\frac{\infty}{\infty}$</li>
+</ul>
+<img src="https://imghubforks-1318113821.cos.ap-shanghai.myqcloud.com/202404081505642.png" srcset="/img/loading.gif" lazyload/>
+
+
+<h2 id="L03-L04-C-Language-and-Memory-Management"><a href="#L03-L04-C-Language-and-Memory-Management" class="headerlink" title="L03, L04 C Language and Memory Management"></a>L03, L04 C Language and Memory Management</h2><ol>
+<li><p><strong>Process of Compilation</strong></p>
+<ul>
+<li><em>C Pre-processing</em>: Handling Macro, Function-like macro(<code>#define</code>), text editing(Removing comments, <code>#include</code>)</li>
+<li><em>Parser&amp;Semantic Analysis</em>:<ul>
+<li>Recognize each code word as a “token”</li>
+<li>Record the location of each token</li>
+<li>Organize tokens as AST tree</li>
+<li>Report errors</li>
+</ul>
+</li>
+<li><em>Code Generation &amp; Optimization</em>: <ul>
+<li>Generate IR(intermediate representation)</li>
+<li>IR to Assembly</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Memory Management</strong></p>
+<ul>
+<li><code>*p = malloc(size_t size)</code>: allocate a block of uninitialized memory</li>
+<li><code>*p = calloc(size_t num, size_t sum)</code>: allocate num*sum bytes zero-initialized memory</li>
+<li><code>*p = realloc(void* ptr, size_t size)</code>: reallocte a block of uninitialized memory(realloc a nullptr is the same as malloc)</li>
+</ul>
+</li>
+<li><p><strong>Segments</strong></p>
+<ul>
+<li><em>Stack</em>: function invocations(start from 0xFFFFFFF)</li>
+<li><em>Heap</em>: dynamic memory allocation(malloc, free…)</li>
+<li><em>Static Data</em>(global and static bariables, allocated in compile time)</li>
+<li><em>Code</em>: same as text segment, saving all code</li>
+</ul>
+</li>
+</ol>
+<h2 id="L08-CALL"><a href="#L08-CALL" class="headerlink" title="L08 CALL"></a>L08 CALL</h2><ol>
+<li><p><strong>Assembler</strong>: Change assembly language code to object code and information table.</p>
+<ul>
+<li>Replace pseudo-instructions with <em>real instructions</em></li>
+<li>Encode <em>logical and arithmetic operations</em></li>
+<li>Encode <em>PC-relative</em> branches and jumps(<strong>two-pass assembler</strong>)<ul>
+<li>Pass 1: remember positions of labels (in symbol table)</li>
+<li>Pass 2: Use label positions to generate machine code</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Linker</strong>: Combine multiple object files(<code>*.o</code>) into one executable file.</p>
+<ul>
+<li>Function call(multiple files): <em>external references</em></li>
+<li>Static data(global)</li>
+<li>Relocate text segments, data segements from differnt files</li>
+<li>Resolve addresses<ul>
+<li>External function reference(jal)</li>
+<li>static data reference(auipc, Itype,Stype)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Loader</strong>: Load the executable file into memory and start the program.</p>
+<ul>
+<li>loading is OS’s job</li>
+</ul>
+</li>
+</ol>
+<h2 id="L09-L10-Digital-circuits-and-systems"><a href="#L09-L10-Digital-circuits-and-systems" class="headerlink" title="L09, L10 Digital circuits and systems"></a>L09, L10 Digital circuits and systems</h2><ol>
+<li><strong>Digital systems</strong><ul>
+<li>NMOS: on when $V_{Gate}&#x3D;1$</li>
+<li>PMOS: on when $V_{Gate}&#x3D;0$</li>
+<li>Synchronous Digital System(SDS) contains combinational digital system and sequential digital system.</li>
+</ul>
+</li>
+<li><strong>Combinational logics</strong><br><strong>Some Boolean Algebra easy to forget</strong><ul>
+<li>$X+YZ&#x3D;(X+Y)(X+Z)$</li>
+<li>$X&#x3D;(X+Y)X&#x3D;X+XY$</li>
+</ul>
+</li>
+<li><strong>Sequential logics</strong><ul>
+<li>Estimating the max frequency<ul>
+<li>$t_{clk-to-Q}+t_{comb}\le T_{clk-period}-setuptime$</li>
+<li>$t_{comb}+t_{clk-to-Q}\ge holdtime$</li>
+<li>How to build a FSM circuit?   <img src="https://imghubforks-1318113821.cos.ap-shanghai.myqcloud.com/202404091516163.png" srcset="/img/loading.gif" lazyload/></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E7%9F%A5%E8%AF%86%E6%95%B4%E7%90%86/" class="category-chain-item">知识整理</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Review/">#Review</a>
+      
+        <a href="/tags/CA/">#CA</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>CA Midterm1</div>
+      <div>http://example.com/2024/04/08/CA-Midterm1/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>KesonStar</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2024年4月8日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2024/01/25/Linux-Learning/" title="Linux Learning">
+                        <span class="hidden-mobile">Linux Learning</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="valine"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#valine', function() {
+      Fluid.utils.createScript('https://lib.baomitu.com/valine/1.5.1/Valine.min.js', function() {
+        var options = Object.assign(
+          {"appId":"YTiAHB0a5m8ZOZhIASKxkIew-gzGzoHsz","appKey":"PtYkSyZzkj5B6xRgZ4LRb84w","path":"window.location.pathname","placeholder":null,"avatar":"retro","meta":["nick","mail","link"],"requiredFields":[],"pageSize":10,"lang":"zh-CN","highlight":false,"recordIP":false,"serverURLs":"","emojiCDN":null,"emojiMaps":null,"enableQQ":false},
+          {
+            el: "#valine",
+            path: window.location.pathname
+          }
+        )
+        new Valine(options);
+        Fluid.utils.waitElementVisible('#valine .vcontent', () => {
+          var imgSelector = '#valine .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
